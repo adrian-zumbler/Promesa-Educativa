@@ -38,6 +38,9 @@ class MusicalAgroupationsController extends AppController {
 			$this->MusicalAgroupation->create();
 			if($this->MusicalAgroupation->save($this->request->data)) {
 				$this->Session->setFlash(__('La agrupacion ha sido guardada'));
+				$this->redirect(array('action' => 'add'));
+				
+
 			} else {
 				$this->Session->setFlash(__('La agrupacion no ha sido guardada '));
 			}
