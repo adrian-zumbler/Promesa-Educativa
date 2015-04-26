@@ -39,8 +39,6 @@ class MusicalAgroupationsController extends AppController {
 			if($this->MusicalAgroupation->save($this->request->data)) {
 				$this->Session->setFlash(__('La agrupacion ha sido guardada'));
 				$this->redirect(array('action' => 'add'));
-				
-
 			} else {
 				$this->Session->setFlash(__('La agrupacion no ha sido guardada '));
 			}
@@ -73,6 +71,7 @@ class MusicalAgroupationsController extends AppController {
     if ($this->MusicalAgroupation->delete($id)) {
         
         return $this->redirect(array('action' => 'view'));
+        $this->Session->setFlash(__('La agrupacion ha sido borrada'));
     }
 }
 }

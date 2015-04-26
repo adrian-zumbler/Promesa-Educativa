@@ -1,4 +1,4 @@
-
+<?php echo $this->Session->flash(); ?>
 	<div class="SearchPanel-addContainer">
 			<?php
 						 echo $this->Html->link(
